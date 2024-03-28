@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Registration Form</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+	<div class="container">
+		<div class="data-container form-box">
+			<h2 style="text-align: center;">Servey form</h2>
+			<form method="post" action="">
+
+				<label>Name:</label><br>
+				<input type="text" class="input-data" name="name" placeholder="Enter your first name"><br><br>
+
+				<label>Gender</label><br>
+				<input type="radio" name="gender" value="Male">Male
+				<input type="radio" name="gender" value="Female">Female
+				<br><br>
+
+				<label>Language:</label><br>
+				<input type="checkbox" name="lag" value="Hindi">Hindi
+				<input type="checkbox" name="lag" value="English">English
+				<input type="checkbox" name="lag" value="Telgu">Telgu
+
+				<label>Age:</label><br>
+				<input type="number" name="age" class="input-data" placeholder="Enter your Age"><br><br>
+
+				<label>Phone:</label><br>
+				<input type="tel" class="input-data" required name="phone" placeholder="Enter your Phone number"><br><br>
+			
+				<label>Address:</label><br>
+				<textarea rows="3" cols="40" class="input-data" name="address" placeholder="Enter Address"></textarea>
+
+				<label>Date of Servey</label><br>
+				<input type="date" class="input-data" name="dos" placeholder="Enter your Servey Date">
+			
+				<input type="submit" class="btn btn-primary">
+			</form>
+		</div>
+
+</div>
+
+</body>
+</html>
