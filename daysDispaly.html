@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Find January Sundays</title>
+</head>
+<body>
+
+<h1>January 1st Sundays between 2014 and 2050</h1>
+<ul id="sunList"></ul>
+
+<script>
+function findJanSun(sy, ey) {
+  let sun = [];
+  for (let i = sy; i <= ey; i++) { 
+    let date = new Date(i, 0, 1);
+    if (date.getDay() === 0) {
+      sun.push(`1st January is being a Sunday ${i}`);
+    }
+  }
+  return sun;
+}
+
+function displayJanSun() {
+  const sun = findJanSun(2014, 2050);
+  const sunListElement = document.getElementById('sunList');  
+  sun.forEach(function(sunDay) {  
+    const li = document.createElement('li');
+    li.textContent = sunDay;
+    sunListElement.appendChild(li);
+  });
+}
+
+window.onload = displayJanSun;
+</script>
+
+</body>
+</html>

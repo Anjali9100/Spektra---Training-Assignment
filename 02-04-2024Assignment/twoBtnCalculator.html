@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+</head>
+<body>
+    <h2>Calculator</h2>
+    <form action="" name="calculator">
+        <label for="fNumber">First Number</label>
+        <input type="number" name="fNumber" id="fNumber"><br><br>
+
+        <label for="sNumber">Second Number</label>
+        <input type="number" name="sNumber" id="sNumber"><br><br>
+
+        <button onclick="calculate('multiply', event)">Multiply</button>
+        <button onclick="calculate('divide', event)">Devide</button>
+    </form><br><br>
+
+    <h2>Output</h2>
+    <p id="display"></p>
+</body>
+</html>
+
+<script>
+    function calculate(operation, event) {
+      event.preventDefault()
+      var fNumber = parseFloat(document.calculator.fNumber.value);
+      var sNumber = parseFloat(document.calculator.sNumber.value);
+      var result;
+    
+      if (operation == 'multiply') {
+        result = fNumber * sNumber;
+      } 
+      else if (operation == 'divide') {
+        if(sNumber != 0) {
+          result = fNumber / sNumber;
+        } else {
+          result = 'Cannot divide by zero';
+        }
+      }
+      document.getElementById('display').innerText = result;
+    }
+</script>
