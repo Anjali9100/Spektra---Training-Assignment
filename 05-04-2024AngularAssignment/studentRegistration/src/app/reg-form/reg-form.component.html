@@ -1,0 +1,30 @@
+<div class="container">
+    <div class="data-container form-box">
+      <h2 style="text-align: center;">Registration form</h2>
+      <form method="post" #regForm="ngForm" (ngSubmit)="saveData(regForm)">
+        <fieldset>
+            <legend>Personal Details</legend>
+  
+          <label>Name:</label><br>
+          <input type="text" class="input-data" required name="fname" ngModel placeholder="Enter your first name"><br><br>
+  
+          <label>Last Name:</label><br>
+          <input type="text" class="input-data" required name="lname" ngModel placeholder="Enter your last name"><br><br>
+  
+          <label>Age:</label><br>
+          <input type="number" name="age" required class="input-data" ngModel placeholder="Enter your Age"><br><br>
+  
+          <label>Phone:</label><br>
+          <input type="tel" class="input-data" required name="phone" ngModel placeholder="Enter your Phone number"><br><br>
+        
+          <label>Email:</label><br>
+          <input type="email" name="email" required class="input-data" ngModel placeholder="Enter your Email"><br><br>
+        
+          <input type="submit" class="btn btn-primary" >
+          
+        </fieldset>
+      </form>
+    </div>
+  
+  </div>
+  

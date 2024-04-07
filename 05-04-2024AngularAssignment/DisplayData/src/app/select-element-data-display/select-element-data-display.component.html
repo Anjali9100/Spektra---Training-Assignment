@@ -1,0 +1,21 @@
+<div class="container">
+    <label for="country">Select the Country</label><br>
+    <select name="country" id="country" [(ngModel)]="selectedCountry">
+        <option value="India">India</option>
+        <option value="US">US</option>
+        <option value="Saudi">Saudi</option>
+        <option value="Japan">Japan</option>
+        <option value="UK">UK</option>
+        <option value="Shrilanka">Shrilanka</option>
+    </select>
+
+    <div [ngSwitch]="selectedCountry">
+        <p *ngSwitchCase="'India'">You have selected India.</p>
+        <p *ngSwitchCase="'US'">You have selected the US.</p>
+        <p *ngSwitchCase="'Saudi'">You have selected Saudi.</p>
+        <p *ngSwitchCase="'Japan'">You have selected Japan.</p>
+        <p *ngSwitchCase="'UK'">You have selected the UK.</p>
+        <p *ngSwitchCase="'Shrilanka'">You have selected Shrilanka.</p>
+        <p *ngSwitchDefault>Select a country to see the message.</p>
+    </div>
+</div>

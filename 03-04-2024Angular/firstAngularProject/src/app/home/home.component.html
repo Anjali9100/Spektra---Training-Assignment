@@ -1,2 +1,42 @@
-<input type="text" (input)="upBtnState($event)" name="name" />
-<button [disabled]="isDisabled">Click me</button>
+<!-- <input type="text" (input)="upBtnState($event)" /> -->
+<!-- <button [disabled]="isDisabled">Click me</button><br> -->
+
+<input type="text" [(ngModel)]="name" />
+
+<button [disabled]="!name">Click me</button><br>
+
+
+
+<form #myForm="ngForm" (ngSubmit)="saveData(myForm)">
+    <label for="name">First</label>
+    <input type="text" name="name" ngModel required="" id="name"><br><br>
+
+    <label for="phone">Phone No</label>
+    <input type="number" name="phone" ngModel required id="phone"><br><br>
+
+    <button class="btn btn-primary">{{buttonText}}</button>
+    
+</form>
+
+
+<table>
+    <thead>
+        <th>id</th>
+        <th>Name</th>
+        <th>Mobile No</th>
+        <th>Action</th>
+    </thead>
+    <tbody>
+        <tr *ngFor="let row of studentDAta">
+            <td>{{row.id}}</td>
+            <td>{{row.name}}</td>
+            <td>{{row.phone}}</td>
+            <td>
+                <button (click)="editRow(row.id)">Edit</button>
+                <button (click)="deleteRow(row.id)">Delete</button>
+            </td>
+        </tr>
+    </tbody>
+
+</table>
+

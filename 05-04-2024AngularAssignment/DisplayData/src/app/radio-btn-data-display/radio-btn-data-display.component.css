@@ -1,0 +1,27 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+.container{
+    background: skyblue;
+    padding: 20px;
+}
+table{
+    margin: 0 auto;
+    padding: 10px;
+    background: white;
+    box-shadow: 5px 10px 50px lightgray;
+    width: 100%;
+    text-align: center;
+}
+table, th{
+    height: 40px;
+}
+table, th, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+    padding: 5px ;
+}
+h2{
+    text-align: center;
+}

@@ -1,0 +1,17 @@
+<div class="container">
+    <h2>Valid / Invalid Data Display</h2>
+    <input type="radio" [(ngModel)]="isValid" value="valid">Valid
+    <input type="radio" [(ngModel)]="isValid" value="invalid">Invalid <br><br>
+
+    <h3>Output</h3><br>
+    @if (isValid === 'valid') {
+        <p>Data is valid.</p>
+    }
+    @else if(isValid === 'invalid'){
+        <p>Data is invalid.</p> 
+    }
+    @else {
+        <p>Check any radio btn</p>
+    }
+</div>
+  
